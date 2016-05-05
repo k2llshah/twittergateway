@@ -15,7 +15,7 @@ app.controller('tweetController', ['$scope', '$http', '$window', function($scope
                 data.forEach(function(entry) {
                     var likecount = entry.like.length;
                     var dislikecount = entry.dislike.length;
-                    if (likecount > 3 || dislikecount > 3) {
+                    if (likecount > 3) {
                         $scope.postTwitter(entry.content);
                     }
                     entry.likecount = likecount;
